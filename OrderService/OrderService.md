@@ -110,7 +110,7 @@ Query a single order by it's agreed on reference ID.
 + orderId: `ord-556` (string, required)
 + type: INITIAL (string, required) - Type of order.  See POST docs for enums.
 + items (array[OrderItem], required) - Selected products in the order.
-+ userKey: hendrickj (string) - User responsible for the order (usually an employee of the lender).
++ userId: hendrickj (string) - User responsible for the order (usually an employee of the lender).
 
 ## OrderItem (object)
 + productSku: `report-951` (string, required)
@@ -131,7 +131,7 @@ Query a single order by it's agreed on reference ID.
 + middleName: Wilks (string)
 + lastName: Doe (string)
 + addresses (array[Address])
-+ ssns: `123-45-6789` (array[string])
++ ssn: `123-45-6789` (string)
 + emails: `johnwdoe@hotmail.com`, `doej@yahoo.com` (array[string])
 + phones: `465-397-2266`, `(818) 332-2184` (array[string])
 
@@ -145,10 +145,6 @@ Query a single order by it's agreed on reference ID.
 ## RequestedAccount (object)
 + accountNum: 9378298758 (number, required)
 + required: yes (string)
-+ requestedByLender: yes (string)
-
-## DeclinedAccount (object)
-+ accountNum: 8254930251 (number, required)
 
 ## RuleParameter (object)
 + rule: Sum transactions in catigory x for the last y weeks (string)

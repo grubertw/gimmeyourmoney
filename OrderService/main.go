@@ -16,16 +16,17 @@
 package main
 
 import (
-    "fmt"
+    //"fmt"
     "os"
-    "net/http"
+    //"net/http"
 
-    "github.com/urfav/negroni"
+    "github.com/urfave/negroni"
     "github.com/gorilla/mux"
-    "github.com/unrolled/render"
+    //"github.com/unrolled/render"
 
     "github.com/grubertw/gimmeyourmoney/OrderService/http_handlers"
     "github.com/grubertw/gimmeyourmoney/OrderService/mq_handlers"
+	"github.com/grubertw/gimmeyourmoney/OrderService/core"
 )
 
 func main() {
@@ -34,7 +35,7 @@ func main() {
         port = "3000"
     }
 
-    formatter := render.New(render.Options{IndentJSON: true,})
+    //formatter := render.New(render.Options{IndentJSON: true,})
 
     server := negroni.Classic()
     mx := mux.NewRouter()
